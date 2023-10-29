@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/rescounts-test/static/css/main.26a30410.css",
+    "main.js": "/rescounts-test/static/js/main.b22b553c.js",
+    "static/js/787.07647520.chunk.js": "/rescounts-test/static/js/787.07647520.chunk.js",
+    "static/media/Mask Group 515.png": "/rescounts-test/static/media/Mask Group 515.758ebf76c0ad8d05f5d0.png",
+    "static/media/Mask Group 516.png": "/rescounts-test/static/media/Mask Group 516.77964ef9400b9feae0e2.png",
+    "static/media/rescounts logoo events new-01.svg": "/rescounts-test/static/media/rescounts logoo events new-01.2b102f6eae71fcb28e862a65f3f01c54.svg",
+    "static/media/Mask Group 95.svg": "/rescounts-test/static/media/Mask Group 95.cc8838b587edd4875f02.svg",
+    "static/media/Group 16683.svg": "/rescounts-test/static/media/Group 16683.9d088b85ad1bd9252f56.svg",
+    "static/media/Group 16684.svg": "/rescounts-test/static/media/Group 16684.df9374112a5a18506960.svg",
+    "index.html": "/rescounts-test/index.html",
+    "main.26a30410.css.map": "/rescounts-test/static/css/main.26a30410.css.map",
+    "main.b22b553c.js.map": "/rescounts-test/static/js/main.b22b553c.js.map",
+    "787.07647520.chunk.js.map": "/rescounts-test/static/js/787.07647520.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26a30410.css",
+    "static/js/main.b22b553c.js"
+  ]
+}
