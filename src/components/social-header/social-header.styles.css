@@ -1,0 +1,85 @@
+span.required {
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-medium) var(--unnamed-font-size-12)
+    var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  font-size: 12px;
+  color: var(--unnamed-color-d80073);
+  text-transform: capitalize;
+}
+.form-container .social {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.form-container .social span {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.form-container hr {
+  position: relative;
+  border-top: 1px solid var(--unnamed-color-707070);
+  overflow: visible;
+  opacity: 0.3;
+  margin-bottom: 23px;
+}
+.form-container hr::after {
+  content: "or";
+  display: block;
+  position: absolute;
+  top: -11px;
+  left: calc(50% - 17.5px);
+  background-color: var(--unnamed-color-ffffff);
+  width: 35px;
+  text-align: center;
+  z-index: 100;
+}
+
+.form-container .social span:first-child {
+  background: transparent url("../../assests/Mask Group 95.svg") 0% 0% no-repeat
+    padding-box;
+}
+.form-container .social span:nth-child(2) {
+  background: transparent url("../../assests/Group 16683.svg") 0% 0% no-repeat
+    padding-box;
+}
+.form-container .social span:nth-child(3) {
+  background: transparent url("../../assests/Group 16684.svg") 0% 0% no-repeat
+    padding-box;
+}
+
+.fields-container,
+.form-container .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.have-account {
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-medium) var(--unnamed-font-size-16) /
+    var(--unnamed-line-spacing-21) var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-474746);
+  font-size: 16px;
+  margin: 12px 0;
+}
+.have-account a {
+  color: var(--unnamed-color-d80073);
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 480px) {
+    .have-account{
+    text-align: center;
+  }
+  .header.desktop .required{
+    display: none;
+  }
+  .form-container hr {
+    margin-bottom: 23px;
+  }
+}

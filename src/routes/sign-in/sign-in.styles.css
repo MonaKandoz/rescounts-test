@@ -1,0 +1,132 @@
+#sign-in .img-container {
+  background: url("../../assests/Mask Group 516.png") no-repeat top right;
+}
+.form-container {
+  max-width: 400px;
+  margin: 25px 0;
+}
+.form-container .header {
+  margin-bottom: 23px;
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-medium) var(--unnamed-font-size-24) / 32px
+    var(--unnamed-font-family-roboto);
+  font-size: 24px;
+  color: var(--unnamed-color-474746);
+  text-transform: capitalize;
+  
+  align-items: flex-end;
+}
+
+.fields-container .forget-pass {
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-medium) var(--unnamed-font-size-18) /
+    var(--unnamed-line-spacing-24) var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-474746);
+  text-align: right;
+  text-decoration: underline;
+
+  text-transform: capitalize;
+}
+.field.remember label {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.not-registered {
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-medium) var(--unnamed-font-size-16) /
+    var(--unnamed-line-spacing-21) var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-474746);
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.not-registered a {
+  color: var(--unnamed-color-d80073);
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+#display-error{
+  display: none;
+  width: fit-content;
+  padding: 10px 20px;
+  margin: 20px 0;
+  background-color: rgb(238, 146, 146);
+  border: 1px solid rgb(243, 88, 88);
+  border-radius: 8px;
+  color: rgb(166, 40, 40);
+  transition: .3s all ease-in-out;
+}
+
+@media only screen and (max-width: 480px) {
+  .img-container,
+   #sign-in span.required,
+   #sign-in label.required::after {
+    display: none;
+  }
+
+  #sign-in{
+    width: 100%;
+  }
+  .form-container .header {
+    margin: 20px 16px;
+  }
+  .form-container .social {
+    margin-bottom: 35px;
+  }
+  .form-container hr {
+    margin-bottom: 32px;
+  }
+  .form-container {
+    max-width: 100%;
+  }
+  .form-container .header {
+    font-size: 20px;
+  }
+  .form-container .social span {
+    height: 30px;
+    width: 30px;
+    background-position: center !important;
+    background-size: cover !important;
+  }
+  .form-container .header,
+  .form-container .social,
+  .not-registered {
+    display: flex;
+    justify-content: center;
+  }
+  .not-registered {
+    gap: 10px;
+    margin-bottom: 75px;
+  }
+  .rights,
+  .forget-pass {
+    font-size: 14px;
+  }
+  .rights {
+    margin-bottom: 105px;
+  }
+  .field.remember {
+    display: flex;
+    align-items: center;
+  }
+  .field.remember label,
+  input.guest-btn {
+    font-size: 16px;
+  }
+  input.guest-btn{
+    margin-bottom: 18px;
+  }
+  .field.remember label {
+    margin-bottom: 0;
+  }
+  input.guest-btn {
+    border: 2px solid var(--unnamed-color-474746);
+  }
+  #display-error{
+    margin: 20px 0;
+  }
+}
