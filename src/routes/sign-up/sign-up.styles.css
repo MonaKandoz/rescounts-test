@@ -73,7 +73,7 @@
  .header.mobile{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 18px !important;
+    margin: 22px 0 18px !important;
   }
   .birthday-gift, .field.acceptTerms label{
     text-wrap: wrap;

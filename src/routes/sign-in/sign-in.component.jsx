@@ -5,6 +5,8 @@ import FormInput from "../../components/form-input/form-input.component";
 import SocialHeader from "../../components/social-header/social-header.component";
 import "./sign-in.styles.css";
 
+import { signInValidation } from "../../utils/form-validation";
+
 const defaultFormFileds ={
   email:'',
   password:''
@@ -20,49 +22,13 @@ const SignIn = () => {
 
     setFormFileds({...formFileds, [name]: value})
   }
-  const displayErrorMsg = (msg) => {
-    let displayError = document.getElementById("display-error");
-    displayError.style.display = "block";
-    displayError.innerHTML = `${msg}`;
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
-  };
+
   const formSubmit = (event)=>{
     event.preventDefault();
 
     //validation
-    if (
-      formFileds.email === "" ||
-      formFileds.password === "" ||
-      formFileds.password.length < 8
-    ) {
-      if (formFileds.password.length < 8) {
-        displayErrorMsg("*Password minimum characters is 8");
-      }
-      return;
-    }
-
-    fetch("https://api-dev.rescounts.com/api/v1/users/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        ...formFileds,
-        notification:
-          "cRgQJvGam-u0UE2iV4vgCI:APA91bH5Qlt7jzbrySQwITgs6PFypMY3hE3dR9ZgMf5ZDJYhIYCfB8d36PqrFrZAq8ygX-qHzKk0F3vwpd9DzzJx39auJzf83krHIxao2DXSV9hlfETIl4eAuNqLk9VfHLA6142-KoDF",
-      }),
-    })
-      .then(res => {
-        if (res.status === 401) {
-          displayErrorMsg("*invalid email or password");
-        } else if (res.status === 200) {
-          return res.clone().json();
-        } else {
-          console.log(res.json());
-        }
-      })
-      .then(json => {
-        alert(`Welcome back ${json.user.lastName}`);
-      })
-      .catch(error => console.error(error));
+    signInValidation(formFileds);
+    
   }
 
   return (
